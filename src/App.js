@@ -7,8 +7,6 @@ import "./styles.css";
  * https://www.codementor.io/projects/web/link-shortener-website-brqjanf6zq
  */
 
-const API_TOKEN = "f73d4f44175299d8dd548700b5d0a8822d18d16e";
-
 export default function App() {
   const inputRef = useRef();
   const [shortenedUrl, setShortenedUrl] = useState("");
@@ -28,7 +26,7 @@ export default function App() {
         long_url: longUrl
       }),
       headers: {
-        Authorization: `Bearer ${API_TOKEN}`,
+        Authorization: `Bearer ${process.env.API_TOKEN}`,
         "Content-Type": "application/json"
       }
     });
