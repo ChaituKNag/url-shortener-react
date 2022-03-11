@@ -26,7 +26,7 @@ export default function App() {
         long_url: longUrl
       }),
       headers: {
-        Authorization: `Bearer ${process.env.API_TOKEN}`,
+        Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
         "Content-Type": "application/json"
       }
     });
